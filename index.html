@@ -297,7 +297,7 @@
     }
 
     /* ════════════════════════════════════════════════════
-   NAVBAR
+   NAVBAR — Futurista com glassmorphism
 ════════════════════════════════════════════════════ */
     .nav {
       position: fixed;
@@ -305,11 +305,29 @@
       left: 0;
       right: 0;
       z-index: 200;
-      background: rgba(246, 244, 240, .92);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      border-bottom: 1px solid var(--border);
-      height: 64px;
+      background: rgba(15, 25, 60, 0.88);
+      backdrop-filter: blur(24px) saturate(1.6);
+      -webkit-backdrop-filter: blur(24px) saturate(1.6);
+      border-bottom: 1.5px solid rgba(0, 199, 177, 0.35);
+      box-shadow: 0 1px 32px rgba(0, 199, 177, 0.10), 0 8px 32px rgba(0,0,0,0.28);
+      height: 70px;
+    }
+
+    /* Linha ciano animada na borda inferior */
+    .nav::after {
+      content: '';
+      position: absolute;
+      bottom: -1.5px;
+      left: 0;
+      right: 0;
+      height: 1.5px;
+      background: linear-gradient(90deg, transparent 0%, #00C7B1 40%, #00EDD6 60%, transparent 100%);
+      animation: nav-glow 4s ease-in-out infinite;
+    }
+
+    @keyframes nav-glow {
+      0%, 100% { opacity: 0.5; }
+      50% { opacity: 1; }
     }
 
     .nav__inner {
@@ -333,8 +351,20 @@
     .nav__logo {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       text-decoration: none;
+      transition: filter .25s;
+    }
+
+    .nav__logo:hover {
+      filter: drop-shadow(0 0 10px rgba(0, 199, 177, 0.6));
+    }
+
+    .nav__logo img {
+      height: 50px !important;
+      width: auto;
+      display: block;
+      flex-shrink: 0;
     }
 
     .nav__logo-mark {
@@ -354,7 +384,7 @@
       font-size: 15px;
       letter-spacing: -.02em;
       line-height: 1.2;
-      color: var(--ink);
+      color: #ffffff;
     }
 
     .nav__logo-name small {
@@ -363,7 +393,7 @@
       font-size: 10px;
       font-weight: 400;
       letter-spacing: .08em;
-      color: var(--muted);
+      color: rgba(0, 199, 177, 0.8);
       text-transform: uppercase;
     }
 
@@ -377,16 +407,17 @@
     .nav__links a {
       font-size: 13px;
       font-weight: 500;
-      color: var(--muted);
+      color: rgba(255,255,255,0.75);
       padding: 4px 2px;
-      transition: color .18s;
+      transition: color .18s, border-bottom-color .18s;
       border-bottom: 2px solid transparent;
+      letter-spacing: .02em;
     }
 
     .nav__links a:hover,
     .nav__links a[aria-current="page"] {
-      color: var(--ink);
-      border-bottom-color: var(--accent);
+      color: #00C7B1;
+      border-bottom-color: #00C7B1;
     }
 
     .nav__links .btn {
@@ -1565,7 +1596,7 @@
           <li style="display:flex;align-items:center;gap:16px;">
             <!-- Telefone em destaque com ícone pulsante (Caminho Crítico) -->
             <a href="tel:+5516991056601"
-              style="display:flex;align-items:center;gap:6px;font-weight:700;font-size:15px;color:var(--ink);text-decoration:none;"
+              style="display:flex;align-items:center;gap:6px;font-weight:700;font-size:15px;color:#ffffff;text-decoration:none;"
               aria-label="Ligar para (16) 99105-6601">
               <div
                 style="width:28px;height:28px;border-radius:50%;background:rgba(0,199,177,.15);color:var(--accent-sky);display:flex;align-items:center;justify-content:center;animation:pulse-phone 2s infinite;">
