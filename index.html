@@ -1,0 +1,2430 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2A2E8C">
+  <title>RM Monitoramento — Segurança 24h · Ribeirão Preto</title>
+  <meta name="description"
+    content="Câmeras, alarmes, interfones e monitoramento 24h em Ribeirão Preto. Instalação em até 24h. Ligue: (16) 99105-6601.">
+
+  <!-- SEO LOCAL: JSON-LD LocalBusiness — melhora ranqueamento no Google Maps e busca local -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "RM Monitoramento de Alarmes",
+  "description": "Empresa especializada em câmeras de segurança, alarmes, portões eletrônicos, interfones e monitoramento 24 horas em Ribeirão Preto e região.",
+  "url": "https://rmmonitoramento.com.br",
+  "telephone": ["+55-16-3610-2473", "+55-16-99105-6601"],
+  "email": "contato@rmmonitoramento.com.br",
+  "priceRange": "R$ 200 / mês",
+  "currenciesAccepted": "BRL",
+  "paymentAccepted": "Dinheiro, Cartão, Pix",
+  "areaServed": {
+    "@type": "City",
+    "name": "Ribeirão Preto",
+    "containedInPlace": { "@type": "State", "name": "São Paulo" }
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Independência, 247",
+    "addressLocality": "Ribeirão Preto",
+    "addressRegion": "SP",
+    "postalCode": "14020-010",
+    "addressCountry": "BR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -21.1767,
+    "longitude": -47.8208
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00" }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "2",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "sameAs": [
+    "https://www.facebook.com/rmalarmesrp",
+    "https://rmmonitoramento.com.br",
+    "https://maps.app.goo.gl/R6P3GRCamposElisiosRibeiraoPreto"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Serviços de Segurança Eletrônica",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Monitoramento 24h" }, "price": "200", "priceCurrency": "BRL", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "200", "unitText": "mês" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Câmeras de Segurança CFTV" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Alarmes e Sensores" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Portão Eletrônico" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interfones" } }
+    ]
+  }
+}
+</script>
+
+  <!-- PERFORMANCE: Preconnect + font load com display=swap para não bloquear render -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap"
+    media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap">
+  </noscript>
+
+  <style>
+    /* ════════════════════════════════════════════════════
+   TOKENS
+════════════════════════════════════════════════════ */
+    :root {
+      /* Cores — extraídas da identidade visual real da RM (logo azul-céu + azul-marinho + prata) */
+      /* Contraste mínimo WCAG AA 4.5:1 verificado em todos */
+      --bg: #F6F4F0;
+      --surface: #FFFFFF;
+      --ink: #111110;
+      /* sobre --bg: 16.1:1 ✓ */
+      --muted: #5C5A56;
+      /* sobre --bg:  7.2:1 ✓ */
+      --border: #DDD9D3;
+
+      /* Identidade da marca RM: azul-marinho principal, azul-céu como destaque */
+      --accent: #1A3673;
+      /* azul royal da logo na imagem da campanha */
+      --accent-h: #0F2453;
+      /* hover mais escuro */
+      --accent-sky: #00C7B1;
+      /* ciano/verde água do logo */
+      --accent-txt: #FFFFFF;
+
+      /* Cores de suporte */
+      --silver: #A3AAB5;
+      /* prata do swoosh do logo */
+      --gold: #7A5E0A;
+      /* sobre --bg: 5.8:1 ✓ */
+      --green: #1A7D43;
+      /* sobre --bg: 4.7:1 ✓ */
+
+      --f-d: 'Syne', system-ui, sans-serif;
+      --f-b: 'DM Sans', system-ui, sans-serif;
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+      --sp-xs: 8px;
+      --sp-sm: 16px;
+      --sp-md: 32px;
+      --sp-lg: 64px;
+      --sp-xl: 104px;
+      --touch: 44px;
+    }
+
+    /* ════════════════════════════════════════════════════
+   RESET & BASE
+════════════════════════════════════════════════════ */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      /* Scroll suave só com interação humana, não programática */
+      scroll-padding-top: 72px;
+      -webkit-font-smoothing: antialiased;
+      text-size-adjust: 100%;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--f-b);
+      font-size: 16px;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    /* ACESSIBILIDADE: Skip-link visível no foco de teclado */
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 16px;
+      background: var(--accent);
+      color: var(--accent-txt);
+      padding: 12px 20px;
+      border-radius: 0 0 8px 8px;
+      font-weight: 600;
+      font-size: 14px;
+      z-index: 9999;
+      transition: top .2s;
+      text-decoration: none;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    /* ACESSIBILIDADE: Foco visível em todos os elementos interativos */
+    :focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    /* ════════════════════════════════════════════════════
+   TIPOGRAFIA
+════════════════════════════════════════════════════ */
+    .t-label {
+      font-family: var(--f-b);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .t-display {
+      font-family: var(--f-d);
+      font-weight: 800;
+      line-height: .96;
+      letter-spacing: -.03em;
+    }
+
+    .t-heading {
+      font-family: var(--f-d);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -.02em;
+    }
+
+    .ac {
+      color: var(--accent);
+    }
+
+    /* ════════════════════════════════════════════════════
+   LAYOUT
+════════════════════════════════════════════════════ */
+    .container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 0 20px;
+      }
+    }
+
+    /* ════════════════════════════════════════════════════
+   BOTÕES — touch targets mínimos 44px
+════════════════════════════════════════════════════ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--sp-xs);
+      min-height: var(--touch);
+      padding: 10px 22px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-family: var(--f-b);
+      font-size: 15px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background .18s var(--ease), transform .18s var(--ease), box-shadow .18s;
+      white-space: nowrap;
+      /* Evita que o botão quebre em telas pequenas */
+      flex-shrink: 0;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--accent-txt);
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus-visible {
+      background: var(--accent-h);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px rgba(13, 74, 150, .25);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--ink);
+      border: 1.5px solid var(--border);
+    }
+
+    .btn-ghost:hover,
+    .btn-ghost:focus-visible {
+      border-color: var(--ink);
+      background: var(--ink);
+      color: #fff;
+    }
+
+    /* Botão full-width para mobile */
+    .btn-full {
+      width: 100%;
+    }
+
+    /* ════════════════════════════════════════════════════
+   NAVBAR
+════════════════════════════════════════════════════ */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      background: rgba(246, 244, 240, .92);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+      height: 64px;
+    }
+
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 40px;
+      gap: var(--sp-md);
+    }
+
+    @media (max-width: 640px) {
+      .nav__inner {
+        padding: 0 20px;
+      }
+    }
+
+    /* Logo */
+    .nav__logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .nav__logo-mark {
+      width: 36px;
+      height: 36px;
+      background: var(--accent);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .nav__logo-name {
+      font-family: var(--f-d);
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: -.02em;
+      line-height: 1.2;
+      color: var(--ink);
+    }
+
+    .nav__logo-name small {
+      display: block;
+      font-family: var(--f-b);
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: .08em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    /* Links desktop */
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav__links a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+      padding: 4px 2px;
+      transition: color .18s;
+      border-bottom: 2px solid transparent;
+    }
+
+    .nav__links a:hover,
+    .nav__links a[aria-current="page"] {
+      color: var(--ink);
+      border-bottom-color: var(--accent);
+    }
+
+    .nav__links .btn {
+      margin-left: 8px;
+    }
+
+    /* Hamburguer menu mobile */
+    .nav__toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      width: var(--touch);
+      height: var(--touch);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 6px;
+    }
+
+    .nav__toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--ink);
+      border-radius: 2px;
+      transition: transform .3s var(--ease), opacity .3s;
+    }
+
+    .nav__toggle[aria-expanded="true"] span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .nav__toggle[aria-expanded="true"] span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav__toggle[aria-expanded="true"] span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Drawer mobile */
+    .nav__drawer {
+      display: none;
+      position: fixed;
+      top: 64px;
+      left: 0;
+      right: 0;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 20px 24px;
+      z-index: 199;
+      flex-direction: column;
+      gap: 4px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+    }
+
+    .nav__drawer.open {
+      display: flex;
+    }
+
+    .nav__drawer a {
+      display: flex;
+      align-items: center;
+      height: var(--touch);
+      padding: 0 8px;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--ink);
+      border-radius: 6px;
+      transition: background .15s;
+    }
+
+    .nav__drawer a:hover {
+      background: var(--bg);
+    }
+
+    .nav__drawer .btn {
+      margin-top: 8px;
+      width: 100%;
+    }
+
+    @media (max-width: 840px) {
+      .nav__links {
+        display: none;
+      }
+
+      .nav__toggle {
+        display: flex;
+      }
+    }
+
+    /* ════════════════════════════════════════════════════
+   HERO
+════════════════════════════════════════════════════ */
+    .hero {
+      padding-top: 120px;
+      padding-bottom: 80px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero__grid {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .hero__kicker {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .hero__dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-sky);
+      /* ACESSIBILIDADE: box-shadow para não depender só de cor */
+      box-shadow: 0 0 0 3px rgba(26, 143, 204, .22);
+      flex-shrink: 0;
+      animation: pulse 2.8s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 3px rgba(0, 199, 177, .22);
+      }
+
+      50% {
+        box-shadow: 0 0 0 6px rgba(0, 199, 177, .08);
+      }
+    }
+
+    @keyframes pulse-phone {
+      0% {
+        box-shadow: 0 0 0 0 rgba(0, 199, 177, .4);
+      }
+
+      70% {
+        box-shadow: 0 0 0 8px rgba(0, 199, 177, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(0, 199, 177, 0);
+      }
+    }
+
+    .hero__title {
+      font-size: clamp(48px, 6.5vw, 88px);
+      margin-bottom: 24px;
+    }
+
+    .hero__body {
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--muted);
+      max-width: 460px;
+      margin-bottom: 36px;
+    }
+
+    .hero__body strong {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .hero__actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    /* Painel de stats */
+    .hero__panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px;
+    }
+
+    .stat {
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .stat:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .stat+.stat {
+      padding-top: 24px;
+    }
+
+    .stat__num {
+      font-family: var(--f-d);
+      font-weight: 800;
+      font-size: 44px;
+      letter-spacing: -.04em;
+      line-height: 1;
+      margin-bottom: 4px;
+      color: var(--ink);
+    }
+
+    .stat__num .ac {
+      color: var(--accent);
+    }
+
+    .stat__label {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .stars-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    /* ════════════════════════════════════════════════════
+   SERVIÇOS — BENTO GRID
+════════════════════════════════════════════════════ */
+    .services {
+      padding: var(--sp-xl) 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: var(--sp-md);
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .section-head__right {
+      max-width: 300px;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .bento {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-rows: 196px;
+      gap: 14px;
+    }
+
+    /* Card base */
+    .bc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: relative;
+      overflow: hidden;
+      transition: border-color .22s, transform .22s var(--ease), box-shadow .22s;
+    }
+
+    .bc:hover,
+    .bc:focus-within {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(13, 74, 150, .1);
+    }
+
+    .bc__ico {
+      position: absolute;
+      top: 26px;
+      left: 28px;
+      color: var(--accent);
+    }
+
+    .bc__tag {
+      position: absolute;
+      top: 26px;
+      right: 26px;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      color: var(--muted);
+      background: var(--bg);
+    }
+
+    .bc__name {
+      font-family: var(--f-d);
+      font-weight: 700;
+      font-size: 19px;
+      letter-spacing: -.02em;
+      margin-bottom: 5px;
+    }
+
+    .bc__desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* Spans */
+    .bc:nth-child(1) {
+      grid-column: span 5;
+      background: #ECF2FB;
+    }
+
+    .bc:nth-child(2) {
+      grid-column: span 4;
+    }
+
+    .bc:nth-child(3) {
+      grid-column: span 3;
+      grid-row: span 2;
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .bc:nth-child(3) .bc__desc {
+      color: rgba(255, 255, 255, .55);
+    }
+
+    .bc:nth-child(3) .bc__ico {
+      color: var(--accent-sky);
+    }
+
+    .bc:nth-child(3) .bc__tag {
+      border-color: rgba(255, 255, 255, .15);
+      color: rgba(255, 255, 255, .55);
+      background: transparent;
+    }
+
+    .bc:nth-child(4) {
+      grid-column: span 5;
+    }
+
+    .bc:nth-child(5) {
+      grid-column: span 4;
+      background: var(--accent-sky);
+      color: var(--ink);
+    }
+
+    .bc:nth-child(5) .bc__desc {
+      color: rgba(17, 17, 16, .75);
+    }
+
+    .bc:nth-child(5) .bc__ico {
+      color: var(--ink);
+      opacity: .9;
+    }
+
+    .bc:nth-child(5) .bc__tag {
+      border-color: rgba(17, 17, 16, .2);
+      color: rgba(17, 17, 16, .8);
+      background: transparent;
+    }
+
+    /* Imagens em Serviços */
+    .bc__img-wrap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .bc__img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.15;
+      transition: opacity .3s, transform 3s ease-out;
+    }
+
+    .bc:hover .bc__img-wrap img {
+      opacity: 0.25;
+      transform: scale(1.05);
+    }
+
+    .bc__content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      height: 100%;
+    }
+
+    /* ════════════════════════════════════════════════════
+   PLANO / OFERTA
+════════════════════════════════════════════════════ */
+    .offer {
+      padding: var(--sp-xl) 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .offer__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .offer__title {
+      font-size: clamp(34px, 4.5vw, 52px);
+      margin: 14px 0 28px;
+    }
+
+    /* Lista de itens */
+    .offer__list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .offer__item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 15px;
+    }
+
+    .offer__item:first-child {
+      border-top: 1px solid var(--border);
+    }
+
+    .offer__item em {
+      color: var(--muted);
+      font-size: 13px;
+      font-style: normal;
+      margin-left: auto;
+      white-space: nowrap;
+    }
+
+    .check-ico {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #fff;
+    }
+
+    /* Card de preço */
+    .price-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 44px 36px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .price-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--accent);
+    }
+
+    .price-card__label {
+      margin-bottom: 24px;
+    }
+
+    .price-amt {
+      display: flex;
+      align-items: flex-start;
+      gap: 4px;
+      margin-bottom: 4px;
+    }
+
+    .price-sup {
+      font-family: var(--f-d);
+      font-weight: 700;
+      font-size: 22px;
+      margin-top: 10px;
+      color: var(--muted);
+    }
+
+    .price-num {
+      font-family: var(--f-d);
+      font-weight: 800;
+      font-size: 80px;
+      letter-spacing: -.05em;
+      line-height: 1;
+      color: var(--ink);
+    }
+
+    .price-period {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 32px;
+    }
+
+    /* CTA principal — ação em 1 clique */
+    .cta-primary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: var(--touch);
+      width: 100%;
+      background: var(--accent);
+      color: var(--accent-txt);
+      font-family: var(--f-b);
+      font-size: 16px;
+      font-weight: 600;
+      padding: 14px 20px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background .18s var(--ease), transform .18s, box-shadow .18s;
+      /* ACESSIBILIDADE: role e aria no HTML */
+    }
+
+    .cta-primary:hover,
+    .cta-primary:focus-visible {
+      background: var(--accent-h);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(13, 74, 150, .28);
+    }
+
+    .price-note {
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 14px;
+    }
+
+    /* ════════════════════════════════════════════════════
+   CONFIANÇA / PROVA SOCIAL
+════════════════════════════════════════════════════ */
+    .trust {
+      padding: var(--sp-xl) 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* Grade de números */
+    .trust__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      margin-top: 48px;
+    }
+
+    .trust__cell {
+      background: var(--surface);
+      padding: 36px 28px;
+    }
+
+    .trust__num {
+      font-family: var(--f-d);
+      font-weight: 800;
+      font-size: 40px;
+      letter-spacing: -.04em;
+      margin-bottom: 6px;
+    }
+
+    .trust__num .ac {
+      color: var(--accent);
+    }
+
+    .trust__sub {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* Depoimentos */
+    .reviews {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 40px;
+    }
+
+    .review {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      transition: border-color .2s;
+    }
+
+    .review:hover {
+      border-color: var(--accent);
+    }
+
+    .review__stars {
+      color: var(--gold);
+      font-size: 14px;
+      letter-spacing: 3px;
+      margin-bottom: 12px;
+    }
+
+    /* ACESSIBILIDADE: aria-label para as estrelas está no HTML */
+    .review__text {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.7;
+      color: var(--ink);
+      font-style: italic;
+      margin-bottom: 18px;
+    }
+
+    .review__by {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ════════════════════════════════════════════════════
+   CONTATO
+════════════════════════════════════════════════════ */
+    .contact {
+      padding: var(--sp-xl) 0;
+    }
+
+    .contact__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .contact__rows {
+      margin-top: 36px;
+    }
+
+    .contact__row {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact__row:first-child {
+      border-top: 1px solid var(--border);
+    }
+
+    .c-ico {
+      width: 36px;
+      height: 36px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--accent);
+      /* ACESSIBILIDADE: ícones são decorativos, texto ao lado carrega o conteúdo */
+      aria-hidden: true;
+    }
+
+    .c-key {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .c-val {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .c-val a {
+      transition: color .18s;
+    }
+
+    .c-val a:hover {
+      color: var(--accent);
+    }
+
+    /* Formulário */
+    .form-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px 36px;
+    }
+
+    .form-card h2 {
+      font-family: var(--f-d);
+      font-weight: 700;
+      font-size: 24px;
+      letter-spacing: -.02em;
+      margin-bottom: 6px;
+    }
+
+    .form-card p {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .fg {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .fg label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      /* ACESSIBILIDADE: labels sempre visíveis, nunca placeholder-only */
+    }
+
+    .fg input,
+    .fg select,
+    .fg textarea {
+      font-family: var(--f-b);
+      font-size: 15px;
+      color: var(--ink);
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: 6px;
+      padding: 11px 14px;
+      min-height: var(--touch);
+      outline: none;
+      transition: border-color .18s, box-shadow .18s;
+      width: 100%;
+    }
+
+    .fg input:focus,
+    .fg select:focus,
+    .fg textarea:focus {
+      border-color: var(--accent);
+      background: var(--surface);
+      box-shadow: 0 0 0 3px rgba(13, 74, 150, .1);
+    }
+
+    .fg select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%235C5A56' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      background-color: var(--bg);
+      padding-right: 36px;
+      cursor: pointer;
+    }
+
+    .fg textarea {
+      height: 96px;
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    /* ════════════════════════════════════════════════════
+   STICKY CTA MOBILE — CAMINHO CRÍTICO EM 1 TOQUE
+════════════════════════════════════════════════════ */
+    .sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 190;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 12px 20px;
+      gap: 10px;
+    }
+
+    .sticky-cta a {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: var(--touch);
+      border-radius: 8px;
+      font-family: var(--f-b);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background .18s, transform .18s;
+    }
+
+    .sticky-cta__wa {
+      background: #1A7D43;
+      color: #fff;
+    }
+
+    .sticky-cta__wa:hover {
+      background: #155E32;
+    }
+
+    .sticky-cta__tel {
+      background: var(--bg);
+      color: var(--ink);
+      border: 1.5px solid var(--border);
+    }
+
+    .sticky-cta__tel:hover {
+      border-color: var(--ink);
+    }
+
+    /* ════════════════════════════════════════════════════
+   WHATSAPP DESKTOP FAB
+════════════════════════════════════════════════════ */
+    .wa-fab {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 190;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: #1A7D43;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      box-shadow: 0 4px 18px rgba(26, 125, 67, .38);
+      transition: transform .2s var(--ease), box-shadow .2s;
+      text-decoration: none;
+    }
+
+    .wa-fab:hover,
+    .wa-fab:focus-visible {
+      transform: scale(1.1);
+      box-shadow: 0 8px 28px rgba(26, 125, 67, .5);
+    }
+
+    /* ════════════════════════════════════════════════════
+   FOOTER
+════════════════════════════════════════════════════ */
+    .footer {
+      background: var(--accent);
+      color: rgba(255, 255, 255, .55);
+      padding: 48px 40px;
+    }
+
+    .footer__inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer__logo {
+      font-family: var(--f-d);
+      font-weight: 700;
+      font-size: 17px;
+      color: #fff;
+      letter-spacing: -.02em;
+    }
+
+    .footer__logo small {
+      display: block;
+      font-family: var(--f-b);
+      font-weight: 300;
+      font-size: 11px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .35);
+      margin-top: 2px;
+    }
+
+    .footer__links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer__links a {
+      font-size: 13px;
+      color: rgba(255, 255, 255, .5);
+      transition: color .18s;
+    }
+
+    .footer__links a:hover {
+      color: #fff;
+    }
+
+    .footer__copy {
+      font-size: 12px;
+    }
+
+    /* ════════════════════════════════════════════════════
+   TOAST — feedback "Redirecionando para o WhatsApp..."
+════════════════════════════════════════════════════ */
+    .toast {
+      position: fixed;
+      bottom: 88px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      z-index: 300;
+      background: var(--ink);
+      color: #fff;
+      font-family: var(--f-b);
+      font-size: 14px;
+      font-weight: 500;
+      padding: 12px 20px;
+      border-radius: 100px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, .2);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s var(--ease), transform .3s var(--ease);
+      white-space: nowrap;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .toast__dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #1A7D43;
+      animation: blink 1s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+
+    /* HUMAN section responsive */
+    @media (max-width: 840px) {
+      .human__grid {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .6s var(--ease), transform .6s var(--ease);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* prefers-reduced-motion: sem animações */
+    @media (prefers-reduced-motion: reduce) {
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+
+      .hero__dot {
+        animation: none;
+      }
+
+      * {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+      }
+    }
+
+    /* ════════════════════════════════════════════════════
+   RESPONSIVE — TABLET (≤ 960px)
+════════════════════════════════════════════════════ */
+    @media (max-width: 960px) {
+      :root {
+        --sp-xl: 72px;
+      }
+
+      .hero__grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hero__panel {
+        display: none;
+      }
+
+      .hero__title {
+        font-size: clamp(44px, 10vw, 64px);
+      }
+
+      .section-head__right {
+        max-width: 100%;
+      }
+
+      .bento {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: auto;
+      }
+
+      .bc {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+        min-height: 170px;
+      }
+
+      .offer__grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .trust__grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .reviews {
+        grid-template-columns: 1fr;
+      }
+
+      .contact__grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    /* ════════════════════════════════════════════════════
+   RESPONSIVE — MOBILE (≤ 640px)
+════════════════════════════════════════════════════ */
+    @media (max-width: 640px) {
+      :root {
+        --sp-xl: 56px;
+      }
+
+      .hero {
+        padding-top: 100px;
+        padding-bottom: 56px;
+      }
+
+      .hero__title {
+        font-size: 42px;
+      }
+
+      .hero__actions {
+        flex-direction: column;
+      }
+
+      .hero__actions .btn {
+        width: 100%;
+      }
+
+      .bento {
+        grid-template-columns: 1fr;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      /* Sticky bar visível apenas mobile */
+      .sticky-cta {
+        display: flex;
+      }
+
+      /* Dar espaço para a sticky bar não cobrir conteúdo */
+      .contact {
+        padding-bottom: 96px;
+      }
+
+      /* Ocultar FAB desktop no mobile (sticky-cta substitui) */
+      .wa-fab {
+        display: none;
+      }
+
+      .trust__grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .price-num {
+        font-size: 64px;
+      }
+
+      .footer {
+        padding: 40px 20px;
+      }
+
+      .footer__inner {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .footer__links {
+        justify-content: center;
+      }
+    }
+
+    /* ════════════════════════════════════════════════════
+   IMPRESSÃO — leve, sem backgrounds
+════════════════════════════════════════════════════ */
+    @media print {
+
+      .nav,
+      .wa-fab,
+      .sticky-cta,
+      .hero__panel {
+        display: none;
+      }
+
+      body {
+        background: #fff;
+        color: #000;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ACESSIBILIDADE: pular direto para conteúdo principal -->
+  <a href="#main" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- ══════════ NAV ══════════ -->
+  <header role="banner">
+    <nav class="nav" aria-label="Navegação principal">
+      <div class="nav__inner">
+
+        <a href="#" class="nav__logo" aria-label="RM Monitoramento — página inicial">
+          <img
+            src="data:image/png;base64,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"
+            alt="Logo RM Monitoramento de Alarmes" width="57" height="54"
+            style="display:block;height:38px;width:auto;flex-shrink:0" loading="eager" decoding="async">
+          <div class="nav__logo-name">
+            Monitoramento
+            <small>de Alarmes · Ribeirão Preto</small>
+          </div>
+        </a>
+
+        <!-- Desktop links -->
+        <ul class="nav__links" role="list">
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#promocao">Planos</a></li>
+          <li><a href="#equipe">Equipe</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li style="display:flex;align-items:center;gap:16px;">
+            <!-- Telefone em destaque com ícone pulsante (Caminho Crítico) -->
+            <a href="tel:+5516991056601"
+              style="display:flex;align-items:center;gap:6px;font-weight:700;font-size:15px;color:var(--ink);text-decoration:none;"
+              aria-label="Ligar para (16) 99105-6601">
+              <div
+                style="width:28px;height:28px;border-radius:50%;background:rgba(0,199,177,.15);color:var(--accent-sky);display:flex;align-items:center;justify-content:center;animation:pulse-phone 2s infinite;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.28-.93a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+              </div>
+              (16) 99105-6601
+            </a>
+            <a href="https://wa.me/5516991056601?text=Olá,%20vim%20pelo%20site%20e%20quero%20um%20orçamento."
+              target="_blank" rel="noopener noreferrer" class="btn btn-primary"
+              aria-label="Solicitar orçamento pelo WhatsApp (abre nova aba)">
+              Solicitar orçamento
+            </a>
+          </li>
+        </ul>
+
+        <!-- Hamburger mobile -->
+        <button class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-drawer"
+          aria-label="Abrir menu de navegação">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Drawer mobile -->
+    <nav id="nav-drawer" class="nav__drawer" aria-label="Menu mobile" aria-hidden="true">
+      <a href="#servicos" class="drawer-link">Serviços</a>
+      <a href="#promocao" class="drawer-link">Planos</a>
+      <a href="#equipe" class="drawer-link">Equipe</a>
+      <a href="#sobre" class="drawer-link">Sobre</a>
+      <a href="#contato" class="drawer-link">Contato</a>
+      <a href="https://wa.me/5516991056601?text=Olá,%20quero%20um%20orçamento." target="_blank"
+        rel="noopener noreferrer" class="btn btn-primary btn-full" aria-label="Solicitar orçamento pelo WhatsApp">
+        Solicitar orçamento
+      </a>
+    </nav>
+  </header>
+
+  <!-- ══════════ MAIN ══════════ -->
+  <main id="main">
+
+    <!-- ── HERO ─────────────────────── -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero__grid">
+
+          <div class="hero__left">
+            <div class="hero__kicker">
+              <div class="hero__dot" role="img" aria-label="Status: Sempre Ativo"></div>
+              <span class="t-label">Monitoramento 24h &bull; Sempre Ativo</span>
+            </div>
+
+            <h1 id="hero-title" class="t-display hero__title">
+              Proteja seu<br>patrimônio<br><span style="color:var(--accent-sky)">hoje mesmo.</span>
+            </h1>
+
+            <p class="hero__body">
+              Instalação em <strong>até 24h em Ribeirão Preto</strong>. Câmeras, alarmes,
+              portões eletrônicos e monitoramento profissional para sua família
+              e empresa dormirem tranquilas.
+            </p>
+
+            <!-- UX: CTAs principais em ordem de prioridade -->
+            <div class="hero__actions">
+              <a href="https://wa.me/5516991056601?text=Olá,%20quero%20um%20orçamento." target="_blank"
+                rel="noopener noreferrer" class="btn btn-primary"
+                aria-label="Falar no WhatsApp com a RM Monitoramento (abre nova aba)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z" />
+                  <path
+                    d="M12 0C5.373 0 0 5.373 0 12c0 2.127.555 4.122 1.523 5.855L.057 23.59a.72.72 0 0 0 .663.952l6.222-1.65A11.938 11.938 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.26-1.525l-3.571.959.98-3.71A9.783 9.783 0 0 1 2.182 12C2.182 6.572 6.572 2.182 12 2.182c5.428 0 9.818 4.39 9.818 9.818 0 5.428-4.39 9.818-9.818 9.818z" />
+                </svg>
+                Falar no WhatsApp
+              </a>
+              <a href="tel:+551636102473" class="btn btn-ghost" aria-label="Ligar para (16) 3610-2473">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.28-.93a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+                (16) 3610-2473
+              </a>
+            </div>
+          </div>
+
+          <!-- Painel stats (apenas desktop) -->
+          <aside class="hero__panel" aria-label="Destaques">
+            <div class="stat">
+              <div class="stat__num"><span class="ac">24</span>h</div>
+              <div class="stat__label">Instalação e monitoramento contínuo</div>
+            </div>
+            <div class="stat">
+              <a href="https://maps.app.goo.gl/search/RM+Monitoramento+Ribeirao+Preto" target="_blank"
+                rel="noopener noreferrer" style="text-decoration:none;color:inherit;display:block"
+                aria-label="Ver avaliações no Google Maps (abre nova aba)">
+                <div class="stat__num"><span class="ac">5.0</span></div>
+                <div class="stars-row">
+                  <svg width="74" height="13" viewBox="0 0 74 13" fill="#7A5E0A" aria-label="5 estrelas" role="img">
+                    <title>5 estrelas</title>
+                    <path
+                      d="M6.5 0l1.6 3.3 3.7.5-2.7 2.6.6 3.7L6.5 8.3l-3.2 1.8.6-3.7L1.2 3.8l3.7-.5zM21.5 0l1.6 3.3 3.7.5-2.7 2.6.6 3.7-3.2-1.7-3.2 1.7.6-3.7-2.7-2.6 3.7-.5zM36.5 0l1.6 3.3 3.7.5-2.7 2.6.6 3.7-3.2-1.7-3.2 1.7.6-3.7-2.7-2.6 3.7-.5zM51.5 0l1.6 3.3 3.7.5-2.7 2.6.6 3.7-3.2-1.7-3.2 1.7.6-3.7-2.7-2.6 3.7-.5zM66.5 0l1.6 3.3 3.7.5-2.7 2.6.6 3.7-3.2-1.7-3.2 1.7.6-3.7-2.7-2.6 3.7-.5z" />
+                  </svg>
+                  <span class="t-label" style="display:flex;align-items:center;gap:4px">
+                    Google
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" aria-hidden="true">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                  </span>
+                </div>
+              </a>
+            </div>
+            <div class="stat">
+              <div class="stat__num">1<span class="ac">ª</span></div>
+              <div class="stat__label">Linha de equipamentos no mercado</div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SERVIÇOS ──────────────────── -->
+    <section class="services" id="servicos" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="t-label" style="margin-bottom:10px">O que oferecemos</p>
+            <h2 id="services-title" class="t-heading" style="font-size:clamp(30px,4vw,46px)">Nossos serviços</h2>
+          </div>
+          <p class="section-head__right">Instalação profissional para residências e empresas com equipamentos de ponta.
+          </p>
+        </div>
+
+        <ul class="bento reveal" role="list" aria-label="Lista de serviços">
+
+          <li class="bc">
+            <!-- imagem05.jpg: duas câmeras bullet instaladas na parede — perfeita para CFTV -->
+            <div class="bc__img-wrap"><img src="Pagina RM monitoramento/imagem05.jpg"
+                alt="Câmeras CFTV instaladas em parede"></div>
+            <div class="bc__content">
+              <div class="bc__ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M23 7 16 12 23 17V7z" />
+                  <rect x="1" y="5" width="15" height="14" rx="2" />
+                </svg></div>
+              <span class="bc__tag">CFTV · HD</span>
+              <div class="bc__name">Câmeras de segurança</div>
+              <p class="bc__desc">IP e analógicas, visão noturna e acesso remoto pelo celular em tempo real.</p>
+            </div>
+          </li>
+
+          <li class="bc">
+            <!-- imagem03.jpg: mulher ativando painel de alarme — humanização perfeita -->
+            <div class="bc__img-wrap"><img src="Pagina RM monitoramento/imagem03.jpg"
+                alt="Cliente ativando painel de alarme"></div>
+            <div class="bc__content">
+              <div class="bc__ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                  <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                </svg></div>
+              <span class="bc__tag">Sensores</span>
+              <div class="bc__name">Alarmes</div>
+              <p class="bc__desc">Sensores de presença, abertura, sirene e acionamento de emergência integrado.</p>
+            </div>
+          </li>
+
+          <li class="bc">
+            <!-- imagem06.jpg: profissional monitorando 4 câmeras em uma tela —ideal para "Monitoramento 24h" -->
+            <div class="bc__img-wrap"><img src="Pagina RM monitoramento/imagem06.jpg"
+                alt="Profissional monitorando câmeras em tempo real"></div>
+            <div class="bc__content">
+              <div class="bc__ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" />
+                  <line x1="8" y1="21" x2="16" y2="21" />
+                  <line x1="12" y1="17" x2="12" y2="21" />
+                </svg></div>
+              <span class="bc__tag" style="background:var(--accent-sky);color:var(--ink);border:none;">Sempre
+                ativo</span>
+              <div class="bc__name">Monitoramento 24h</div>
+              <p class="bc__desc">Central ativa 24 horas, 7 dias por semana. Resposta imediata a qualquer ocorrência.
+              </p>
+            </div>
+          </li>
+
+          <li class="bc">
+            <!-- imagem04.jpg: cerca elétrica + perímetro real — ideal para Portão/Perímetro -->
+            <div class="bc__img-wrap"><img src="Pagina RM monitoramento/imagem04.jpg"
+                alt="Cerca elétrica instalada no perímetro" style="opacity:0.22;"></div>
+            <div class="bc__content">
+              <div class="bc__ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="2" />
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                </svg></div>
+              <span class="bc__tag">Segurança</span>
+              <div class="bc__name">Cerca Elétrica</div>
+              <p class="bc__desc">Automação residencial e comercial com acionamento por controle.</p>
+            </div>
+          </li>
+
+          <li class="bc">
+            <!-- imagem07.jpg: pessoa tocando tablet com câmeras — acesso remoto / contr. pelo app -->
+            <div class="bc__img-wrap"><img src="Pagina RM monitoramento/imagem07.jpg"
+                alt="Acesso remoto às câmeras pelo celular ou tablet" style="opacity:0.2;"></div>
+            <div class="bc__content">
+              <div class="bc__ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.28-.93a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg></div>
+              <span class="bc__tag" style="background:var(--ink);color:#fff;border:none;">Acesso</span>
+              <div class="bc__name">Interfones</div>
+              <p class="bc__desc">Controle de acesso com comunicação de áudio para portarias e residências.</p>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- ── PLANO ─────────────────────── -->
+    <section class="offer" id="promocao" aria-labelledby="offer-title" style="background:var(--accent);color:#fff;">
+      <div class="container">
+        <div class="offer__grid">
+
+          <div class="reveal">
+            <div
+              style="display:inline-block;padding:6px 14px;background:rgba(255,255,255,.1);border-radius:100px;border:1px solid rgba(255,255,255,.2);margin-bottom:16px;">
+              <p class="t-label"
+                style="color:var(--accent-sky);margin:0;letter-spacing:1px;display:flex;align-items:center;gap:6px;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg> OFERTA ESPECIAL</p>
+            </div>
+            <h2 id="offer-title" class="t-heading offer__title" style="margin-top:0;">Kit Segurança<br><span
+                style="color:var(--accent-sky);">Pronto para uso.</span></h2>
+            <ul class="offer__list" aria-label="O que está incluído no plano"
+              style="border-top:1px solid rgba(255,255,255,.15);">
+              <li class="offer__item" style="border-color:rgba(255,255,255,.15);">
+                <div class="check-ico" aria-hidden="true" style="background:var(--accent-sky);color:var(--ink);"><svg
+                    width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                    stroke-linecap="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></div>
+                1 câmera de segurança instalada <em>Incluso</em>
+              </li>
+              <li class="offer__item" style="border-color:rgba(255,255,255,.15);">
+                <div class="check-ico" aria-hidden="true" style="background:var(--accent-sky);color:var(--ink);"><svg
+                    width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                    stroke-linecap="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></div>
+                4 sensores de alarme <em>Incluso</em>
+              </li>
+              <li class="offer__item" style="border-color:rgba(255,255,255,.15);">
+                <div class="check-ico" aria-hidden="true" style="background:var(--accent-sky);color:var(--ink);"><svg
+                    width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                    stroke-linecap="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></div>
+                Monitoramento 24 horas <em>Incluso</em>
+              </li>
+              <li class="offer__item" style="border-color:rgba(255,255,255,.15);">
+                <div class="check-ico" aria-hidden="true" style="background:var(--silver);color:#fff;"><svg width="11"
+                    height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                    stroke-linecap="round">
+                    <line x1="12" y1="5" x2="12" y2="19" />
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                  </svg></div>
+                Instalação de equipamentos em comodato <em style="color:var(--accent-sky);">Vantagem</em>
+              </li>
+            </ul>
+          </div>
+
+          <div class="price-card reveal" style="background:var(--surface);border-color:var(--border);">
+            <div class="price-card__label">
+              <p class="t-label">Valor mensal de monitoramento</p>
+            </div>
+            <div class="price-amt" aria-label="R$ 200,00 por mês">
+              <span class="price-sup" aria-hidden="true">R$</span>
+              <span class="price-num" aria-hidden="true" style="color:var(--ink);">200</span>
+            </div>
+            <p class="price-period" style="color:var(--muted);">,00 por mês &middot; sem taxa de instalação</p>
+
+            <div
+              style="margin-bottom:16px;background:rgba(0,199,177,.1);border-left:4px solid var(--accent-sky);padding:10px 14px;border-radius:4px;display:flex;align-items:center;gap:10px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              <span style="font-size:13px;font-weight:600;color:var(--ink);">Restam poucas vagas para instalação esta
+                semana!</span>
+            </div>
+
+            <!-- UX: CTA direto, 1 toque, sem formulário intermediário -->
+            <a href="https://wa.me/5516991056601?text=Olá,%20quero%20contratar%20o%20Kit%20Segurança%20por%20R$200%2Fmês."
+              target="_blank" rel="noopener noreferrer" class="cta-primary"
+              aria-label="Contratar plano de R$200/mês pelo WhatsApp (abre nova aba)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z" />
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12c0 2.127.555 4.122 1.523 5.855L.057 23.59a.72.72 0 0 0 .663.952l6.222-1.65A11.938 11.938 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.26-1.525l-3.571.959.98-3.71A9.783 9.783 0 0 1 2.182 12C2.182 6.572 6.572 2.182 12 2.182c5.428 0 9.818 4.39 9.818 9.818 0 5.428-4.39 9.818-9.818 9.818z" />
+              </svg>
+              Contratar pelo WhatsApp
+            </a>
+            <p class="price-note">Ou ligue: <a href="tel:+5516991056601" style="color:var(--accent)">(16) 99105-6601</a>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── HUMANIZAÇÃO — Como trabalhamos ── -->
+    <section class="human" id="equipe" aria-labelledby="human-title"
+      style="padding:var(--sp-xl) 0;border-bottom:1px solid var(--border);background:var(--surface)">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center" class="human__grid">
+
+          <!-- Ilustração de instalação SVG — humanizada, local, sem stock photo genérico -->
+          <div class="reveal human__visual" aria-hidden="true">
+            <div
+              style="background:var(--ink);border:1px solid var(--border);border-radius:20px;overflow:hidden;aspect-ratio:4/3;position:relative;display:flex;align-items:center;justify-content:center">
+
+              <!-- imagem08.jpg: técnico com capacete instalando câmera em muro — a mais profissional de todas! -->
+              <img src="Pagina RM monitoramento/imagem08.jpg"
+                alt="Técnico RM Monitoramento instalando câmera de segurança"
+                style="width:100%;height:100%;object-fit:cover;object-position:top;">
+
+              <!-- Gradiente escuro suave na base para legibilidade do badge -->
+              <div
+                style="position:absolute;bottom:0;left:0;right:0;height:50%;background:linear-gradient(to top, rgba(0,0,0,0.65), transparent);pointer-events:none;">
+              </div>
+
+              <!-- Chip de status: "Câmera Ativa" no topo direito -->
+              <div
+                style="position:absolute;top:20px;right:20px;background:rgba(0,0,0,0.55);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.15);padding:6px 14px;border-radius:100px;display:flex;align-items:center;gap:7px;">
+                <div
+                  style="width:7px;height:7px;border-radius:50%;background:#00C7B1;box-shadow:0 0 0 3px rgba(0,199,177,0.3);animation:pulse 2.5s ease-in-out infinite;">
+                </div>
+                <span
+                  style="font-family:var(--f-b);font-size:12px;font-weight:600;color:#fff;letter-spacing:0.05em;">Câmera
+                  Ativa · 24h</span>
+              </div>
+
+              <!-- Badge de Instalação Confirmada na base -->
+              <div
+                style="position:absolute;bottom:20px;left:20px;right:20px;background:rgba(255,255,255,0.96);padding:14px 18px;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,0.25);display:flex;align-items:center;gap:14px;">
+                <div
+                  style="width:40px;height:40px;border-radius:10px;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  </svg>
+                </div>
+                <div style="flex:1;">
+                  <div style="font-family:var(--f-b);font-weight:700;font-size:14px;color:var(--ink);line-height:1.2;">
+                    Instalação Certificada RM Monitoramento</div>
+                  <div style="font-family:var(--f-b);font-size:12px;color:var(--muted);margin-top:2px;">Técnicos
+                    uniformizados · Equipamentos 1ª linha · Ribeirão Preto</div>
+                </div>
+                <div
+                  style="background:rgba(0,199,177,0.12);border-radius:8px;padding:6px 10px;display:flex;align-items:center;gap:5px;flex-shrink:0;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-sky)"
+                    stroke-width="2.5" stroke-linecap="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  <span style="font-size:11px;font-weight:700;color:var(--accent-sky);">OK</span>
+                </div>
+              </div>
+              <!-- Caption da imagem -->
+              <p style="text-align:center;font-size:12px;color:var(--muted);margin-top:12px;letter-spacing:.04em">
+                Equipe técnica RM Monitoramento em campo — Ribeirão Preto, SP
+              </p>
+            </div>
+
+            <!-- Texto -->
+            <div class="reveal">
+              <p class="t-label" style="margin-bottom:12px">Nossa equipe</p>
+              <h2 id="human-title" class="t-heading" style="font-size:clamp(30px,4vw,46px);margin-bottom:20px">
+                Técnicos certificados,<br>atendimento <span class="ac">local e rápido.</span>
+              </h2>
+              <p style="font-size:16px;font-weight:300;color:var(--muted);line-height:1.75;margin-bottom:32px">
+                Somos uma empresa de <strong style="color:var(--ink);font-weight:500">Ribeirão Preto</strong>, e é aqui
+                que trabalhamos. Nossos técnicos chegam uniformizados, com equipamentos certificados e organizam toda a
+                instalação sem deixar rastro.
+              </p>
+
+              <!-- 3 diferenciais visuais -->
+              <div style="display:flex;flex-direction:column;gap:0">
+                <div
+                  style="display:flex;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid var(--border)">
+                  <div
+                    style="width:40px;height:40px;border-radius:8px;background:#ECF2FB;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--accent)">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="10" />
+                      <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div style="font-weight:600;font-size:15px;margin-bottom:2px">Instalação em até 24h</div>
+                    <div style="font-size:13px;color:var(--muted)">Agendamos no dia seguinte ao contato para Ribeirão
+                      Preto e região.</div>
+                  </div>
+                </div>
+                <div
+                  style="display:flex;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid var(--border)">
+                  <div
+                    style="width:40px;height:40px;border-radius:8px;background:#ECF2FB;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--accent)">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" aria-hidden="true">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div style="font-weight:600;font-size:15px;margin-bottom:2px">Técnicos uniformizados e identificados
+                    </div>
+                    <div style="font-size:13px;color:var(--muted)">Crachá, uniforme e veículo identificado. Você sabe
+                      quem entra na sua casa.</div>
+                  </div>
+                </div>
+                <div style="display:flex;align-items:center;gap:16px;padding:16px 0">
+                  <div
+                    style="width:40px;height:40px;border-radius:8px;background:#ECF2FB;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--accent)">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" aria-hidden="true">
+                      <rect x="2" y="3" width="20" height="14" rx="2" />
+                      <line x1="8" y1="21" x2="16" y2="21" />
+                      <line x1="12" y1="17" x2="12" y2="21" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div style="font-weight:600;font-size:15px;margin-bottom:2px">Pós-instalação com suporte remoto
+                    </div>
+                    <div style="font-size:13px;color:var(--muted)">Configuramos o acesso pelo celular e ficamos
+                      disponíveis no WhatsApp.</div>
+                  </div>
+                </div>
+              </div>
+
+              <a href="https://wa.me/5516991056601?text=Olá,%20quero%20agendar%20uma%20visita%20de%20instalação."
+                target="_blank" rel="noopener noreferrer" class="btn btn-primary"
+                style="margin-top:28px;font-size:15px;padding:13px 26px"
+                aria-label="Agendar instalação pelo WhatsApp (abre nova aba)">
+                Agendar instalação
+              </a>
+            </div>
+
+          </div>
+        </div>
+    </section>
+
+    <!-- ── CONFIANÇA ─────────────────── -->
+    <section class="trust" id="sobre" aria-labelledby="trust-title">
+      <div class="container">
+        <div class="reveal">
+          <p class="t-label" style="margin-bottom:10px">Por que nos escolher</p>
+          <h2 id="trust-title" class="t-heading" style="font-size:clamp(30px,4vw,46px)">Referência em segurança<br>em
+            Ribeirão Preto.</h2>
+        </div>
+
+        <dl class="trust__grid reveal" aria-label="Números da empresa">
+          <div class="trust__cell">
+            <dt class="trust__sub">Instalação rápida</dt>
+            <dd class="trust__num">até <span class="ac">24</span>h</dd>
+          </div>
+          <div class="trust__cell">
+            <dt class="trust__sub">
+              <a href="https://maps.app.goo.gl/search/RM+Monitoramento+Ribeirao+Preto" target="_blank"
+                rel="noopener noreferrer"
+                style="color:inherit;text-decoration:none;display:inline-flex;align-items:center;gap:4px"
+                aria-label="Ver avaliações no Google Maps (abre nova aba)">
+                Avaliação Google Maps
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+            </dt>
+            <dd class="trust__num"><span class="ac">5.0</span> <span
+                style="font-size:18px;color:var(--muted);font-family:var(--f-b);font-weight:400;letter-spacing:0">★★★★★</span>
+            </dd>
+          </div>
+          <div class="trust__cell">
+            <dt class="trust__sub">Equipamentos</dt>
+            <dd class="trust__num">1<span class="ac">ª</span> linha</dd>
+          </div>
+          <div class="trust__cell">
+            <dt class="trust__sub">Monitoramento ativo</dt>
+            <dd class="trust__num">7<span class="ac">d</span>/semana</dd>
+          </div>
+        </dl>
+
+        <div class="reviews reveal" aria-label="Avaliações de clientes">
+          <article class="review">
+            <div class="review__stars" role="img" aria-label="5 de 5 estrelas">★★★★★</div>
+            <blockquote class="review__text">"Muito bom! Ótimos preços e equipamentos de primeira linha. Atendimento
+              excelente do início ao fim."</blockquote>
+            <footer class="review__by">Cliente verificado &mdash; Google Maps</footer>
+          </article>
+          <article class="review">
+            <div class="review__stars" role="img" aria-label="5 de 5 estrelas">★★★★★</div>
+            <blockquote class="review__text">"Empresa séria e comprometida. A instalação foi rápida e o suporte
+              pós-venda é muito atencioso."</blockquote>
+            <footer class="review__by">Mecânica Vanscar &mdash; Google Maps</footer>
+          </article>
+        </div>
+
+        <!-- Link para validar avaliações em tempo real -->
+        <div style="text-align:center;margin-top:24px" class="reveal">
+          <a href="https://maps.app.goo.gl/search/RM+Monitoramento+Ribeirao+Preto" target="_blank"
+            rel="noopener noreferrer" class="btn btn-ghost" style="font-size:13px"
+            aria-label="Ver todas as avaliações no Google Maps (abre nova aba)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            Ver todas as avaliações no Google Maps
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" aria-hidden="true">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+              <polyline points="15 3 21 3 21 9" />
+              <line x1="10" y1="14" x2="21" y2="3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CONTATO ───────────────────── -->
+    <section class="contact" id="contato" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact__grid">
+
+          <div class="reveal">
+            <p class="t-label" style="margin-bottom:10px">Entre em contato</p>
+            <h2 id="contact-title" class="t-heading" style="font-size:clamp(30px,4vw,46px)">Solicite seu<br>orçamento.
+            </h2>
+
+            <address class="contact__rows" style="font-style:normal">
+              <div class="contact__row">
+                <div class="c-ico" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg></div>
+                <div>
+                  <div class="c-key">Endereço</div>
+                  <div class="c-val">R. Pernambuco, 1751 — Campos Elísios<br>Ribeirão Preto · SP · 14085-570</div>
+                </div>
+              </div>
+              <div class="contact__row">
+                <div class="c-ico" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.28-.93a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg></div>
+                <div>
+                  <div class="c-key">Telefone</div>
+                  <div class="c-val"><a href="tel:+551636102473">(16) 3610-2473</a></div>
+                </div>
+              </div>
+              <div class="contact__row">
+                <div class="c-ico" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24"
+                    fill="currentColor">
+                    <path
+                      d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z" />
+                    <path
+                      d="M12 0C5.373 0 0 5.373 0 12c0 2.127.555 4.122 1.523 5.855L.057 23.59a.72.72 0 0 0 .663.952l6.222-1.65A11.938 11.938 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.26-1.525l-3.571.959.98-3.71A9.783 9.783 0 0 1 2.182 12C2.182 6.572 6.572 2.182 12 2.182c5.428 0 9.818 4.39 9.818 9.818 0 5.428-4.39 9.818-9.818 9.818z" />
+                  </svg></div>
+                <div>
+                  <div class="c-key">WhatsApp</div>
+                  <div class="c-val"><a href="https://wa.me/5516991056601" target="_blank"
+                      rel="noopener noreferrer">(16) 99105-6601</a></div>
+                </div>
+              </div>
+              <div class="contact__row">
+                <div class="c-ico" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg></div>
+                <div>
+                  <div class="c-key">Horário comercial</div>
+                  <div class="c-val">Seg – Sex &middot; 08h às 17h<br><span
+                      style="color:var(--accent);font-size:13px">Monitoramento 24h / 7 dias</span></div>
+                </div>
+              </div>
+            </address>
+          </div>
+
+          <!-- Formulário com labels semânticos -->
+          <div class="form-card reveal">
+            <h2>Orçamento gratuito</h2>
+            <p>Preencha e retornamos pelo WhatsApp em minutos.</p>
+
+            <!-- ACESSIBILIDADE: form com novalidate + validação nativa do browser -->
+            <form id="contact-form" novalidate aria-label="Formulário de orçamento">
+              <div class="form-row">
+                <div class="fg">
+                  <label for="f-name">Nome</label>
+                  <input type="text" id="f-name" name="name" placeholder="Seu nome" autocomplete="name" required>
+                </div>
+                <div class="fg">
+                  <label for="f-phone">WhatsApp</label>
+                  <input type="tel" id="f-phone" name="phone" placeholder="(16) 99999-9999" autocomplete="tel"
+                    inputmode="numeric" required>
+                </div>
+              </div>
+              <div class="fg">
+                <label for="f-type">Tipo de imóvel</label>
+                <select id="f-type" name="type" required>
+                  <option value="">Selecione...</option>
+                  <option value="residencia">Residência</option>
+                  <option value="comercio">Comércio</option>
+                  <option value="empresa">Empresa / Indústria</option>
+                  <option value="condominio">Condomínio</option>
+                </select>
+              </div>
+              <div class="fg">
+                <label for="f-service">Serviço de interesse</label>
+                <select id="f-service" name="service" required>
+                  <option value="">Selecione...</option>
+                  <option value="cameras">Câmeras de Segurança</option>
+                  <option value="alarme">Alarme + Monitoramento</option>
+                  <option value="portao">Portão Eletrônico</option>
+                  <option value="interfone">Interfone</option>
+                  <option value="kit">Kit Completo — R$ 200/mês</option>
+                </select>
+              </div>
+              <div class="fg">
+                <label for="f-msg">Observações <span
+                    style="color:var(--muted);font-weight:400">(opcional)</span></label>
+                <textarea id="f-msg" name="message" placeholder="Descreva sua necessidade..."></textarea>
+              </div>
+              <!-- UX: botão submit gera mensagem WhatsApp pré-preenchida -->
+              <button type="submit" class="cta-primary" aria-label="Enviar formulário pelo WhatsApp">
+                Enviar pelo WhatsApp
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+      <div class="footer__logo" style="display:flex;align-items:center;gap:12px">
+        <img
+          src="data:image/png;base64,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"
+          alt="Logo RM Monitoramento" width="48" height="46"
+          style="height:36px;width:auto;opacity:.9;filter:brightness(0) invert(1)" loading="lazy">
+        <div>
+          RM Monitoramento
+          <small>Alarmes &amp; Segurança · Ribeirão Preto, SP</small>
+        </div>
+      </div>
+      <nav class="footer__links" aria-label="Links do rodapé">
+        <a href="#servicos">Serviços</a>
+        <a href="#promocao">Planos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+        <a href="https://www.facebook.com/rmalarmesrp/" target="_blank" rel="noopener noreferrer"
+          aria-label="Página no Facebook (abre nova aba)" style="display:inline-flex;align-items:center;gap:5px">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+          </svg>
+          Facebook
+        </a>
+      </nav>
+      <p class="footer__copy">&copy; 2025 RM Monitoramento</p>
+    </div>
+  </footer>
+
+  <!-- Toast feedback para form submit -->
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true">
+    <div class="toast__dot"></div>
+    Redirecionando para o WhatsApp...
+  </div>
+
+  <!-- ══════════ CTAs FLUTUANTES ══════════ -->
+
+  <!-- Desktop: FAB WhatsApp -->
+  <a class="wa-fab" href="https://wa.me/5516991056601?text=Olá!%20Vim%20pelo%20site%20e%20quero%20um%20orçamento."
+    target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp da RM Monitoramento (abre nova aba)">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z" />
+      <path
+        d="M12 0C5.373 0 0 5.373 0 12c0 2.127.555 4.122 1.523 5.855L.057 23.59a.72.72 0 0 0 .663.952l6.222-1.65A11.938 11.938 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.26-1.525l-3.571.959.98-3.71A9.783 9.783 0 0 1 2.182 12C2.182 6.572 6.572 2.182 12 2.182c5.428 0 9.818 4.39 9.818 9.818 0 5.428-4.39 9.818-9.818 9.818z" />
+    </svg>
+  </a>
+
+  <!-- Mobile: barra sticky com 2 ações — caminho crítico em 1 toque -->
+  <div class="sticky-cta" role="region" aria-label="Ações rápidas">
+    <a href="https://wa.me/5516991056601?text=Olá,%20quero%20um%20orçamento." target="_blank" rel="noopener noreferrer"
+      class="sticky-cta__wa" aria-label="Falar no WhatsApp (abre nova aba)">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z" />
+        <path
+          d="M12 0C5.373 0 0 5.373 0 12c0 2.127.555 4.122 1.523 5.855L.057 23.59a.72.72 0 0 0 .663.952l6.222-1.65A11.938 11.938 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.26-1.525l-3.571.959.98-3.71A9.783 9.783 0 0 1 2.182 12C2.182 6.572 6.572 2.182 12 2.182c5.428 0 9.818 4.39 9.818 9.818 0 5.428-4.39 9.818-9.818 9.818z" />
+      </svg>
+      WhatsApp
+    </a>
+    <a href="tel:+551636102473" class="sticky-cta__tel" aria-label="Ligar para (16) 3610-2473">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path
+          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.28-.93a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+      </svg>
+      Ligar agora
+    </a>
+  </div>
+
+  <!-- ══════════ JS MÍNIMO ══════════ -->
+  <script>
+    /* ── 1. Hamburger menu ──────────────────────────── */
+    const toggle = document.getElementById('nav-toggle');
+    const drawer = document.getElementById('nav-drawer');
+
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      drawer.setAttribute('aria-hidden', String(open));
+      drawer.classList.toggle('open', !open);
+    });
+
+    // Fechar ao clicar em link do drawer
+    drawer.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        toggle.setAttribute('aria-expanded', 'false');
+        drawer.setAttribute('aria-hidden', 'true');
+        drawer.classList.remove('open');
+      });
+    });
+
+    // Fechar ao clicar fora
+    document.addEventListener('click', e => {
+      if (!drawer.contains(e.target) && !toggle.contains(e.target)) {
+        toggle.setAttribute('aria-expanded', 'false');
+        drawer.setAttribute('aria-hidden', 'true');
+        drawer.classList.remove('open');
+      }
+    });
+
+    /* ── 2. Scroll reveal — IntersectionObserver ────── */
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          // Stagger delay por posição no viewport
+          e.target.style.transitionDelay = (i * 0.06) + 's';
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    /* ── 3. Nav active link ─────────────────────────── */
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav__links a[href^="#"]');
+
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const id = e.target.id;
+          navLinks.forEach(a => {
+            const active = a.getAttribute('href') === '#' + id;
+            a.style.color = active ? 'var(--ink)' : '';
+            a.style.borderBottomColor = active ? 'var(--accent)' : 'transparent';
+          });
+        }
+      });
+    }, { threshold: 0.4 });
+
+    sections.forEach(s => navObserver.observe(s));
+
+    /* ── 4. Phone mask ──────────────────────────────── */
+    const ph = document.getElementById('f-phone');
+    if (ph) {
+      ph.addEventListener('input', function () {
+        let v = this.value.replace(/\D/g, '').slice(0, 11);
+        if (v.length > 6) v = `(${v.slice(0, 2)}) ${v.slice(2, 7)}-${v.slice(7)}`;
+        else if (v.length > 2) v = `(${v.slice(0, 2)}) ${v.slice(2)}`;
+        this.value = v;
+      });
+    }
+
+    /* ── 5. Form → WhatsApp com toast feedback ──────── */
+    function showToast() {
+      const toast = document.getElementById('toast');
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2800);
+    }
+
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('f-name').value.trim();
+      const phone = document.getElementById('f-phone').value.trim();
+      const type = document.getElementById('f-type').options[document.getElementById('f-type').selectedIndex].text;
+      const service = document.getElementById('f-service').options[document.getElementById('f-service').selectedIndex].text;
+      const msg = document.getElementById('f-msg').value.trim();
+
+      if (!name || !phone) {
+        const empty = !name ? document.getElementById('f-name') : document.getElementById('f-phone');
+        empty.focus();
+        empty.setAttribute('aria-invalid', 'true');
+        // Shake visual no campo inválido
+        empty.style.borderColor = '#C0392B';
+        empty.style.boxShadow = '0 0 0 3px rgba(192,57,43,.12)';
+        setTimeout(() => { empty.style.borderColor = ''; empty.style.boxShadow = ''; }, 2500);
+        return;
+      }
+
+      // Desabilitar botão + feedback visual antes de abrir nova aba
+      const btn = this.querySelector('[type="submit"]');
+      btn.textContent = 'Abrindo WhatsApp...';
+      btn.style.opacity = '.7';
+      btn.style.pointerEvents = 'none';
+
+      showToast();
+
+      const text = `Olá! Vim pelo site e gostaria de um orçamento.%0A%0A`
+        + `*Nome:* ${encodeURIComponent(name)}%0A`
+        + `*Telefone:* ${encodeURIComponent(phone)}%0A`
+        + `*Imóvel:* ${encodeURIComponent(type)}%0A`
+        + `*Serviço:* ${encodeURIComponent(service)}`
+        + (msg ? `%0A*Obs:* ${encodeURIComponent(msg)}` : '');
+
+      // Pequeno delay para o usuário ler o toast antes de trocar de aba
+      setTimeout(() => {
+        window.open(`https://wa.me/5516991056601?text=${text}`, '_blank', 'noopener,noreferrer');
+        // Restaurar botão
+        btn.textContent = 'Enviar pelo WhatsApp';
+        btn.style.opacity = '';
+        btn.style.pointerEvents = '';
+      }, 600);
+    });
+  </script>
+</body>
+
+</html>
