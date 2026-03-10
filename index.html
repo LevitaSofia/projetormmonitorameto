@@ -2489,7 +2489,7 @@
         </p>
       </div>
 
-      <p class="footer__copy">&copy; 2025 RM Monitoramento &mdash; CNPJ 00.000.000/0001-00 &bull; Ribeirão Preto, SP</p>
+      <p class="footer__copy">&copy; 2025 R M Segurança e Monitoramento LTDA &bull; CNPJ 22.355.870/0001-16 &bull; Ribeirão Preto, SP</p>
     </div>
 
 
@@ -2621,6 +2621,12 @@
     }
 
     document.getElementById('modal-wa-btn')?.addEventListener('click', () => {
+      // Disparo de evento de conversão para marketing/ads
+      if (typeof window.dispatchEvent === 'function') {
+        window.dispatchEvent(new CustomEvent('conversion_lead_wa', { detail: { type: 'form_submit' } }));
+      }
+      console.log('Lead Conversion: WhatsApp button clicked in modal');
+
       if (waUrl) window.open(waUrl, '_blank', 'noopener,noreferrer');
       const modal = document.getElementById('thankyou-modal');
       modal.style.display = 'none';
