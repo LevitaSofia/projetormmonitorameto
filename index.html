@@ -2439,10 +2439,25 @@
   <footer class="footer" role="contentinfo">
     <div class="footer__inner">
       <div class="footer__logo" style="display:flex;align-items:center;gap:12px">
-        <img
-          src="logo-rm.png"
-          alt="Logo RM Monitoramento" width="48" height="46"
-          style="height:42px;width:auto;opacity:.9;filter:brightness(0) invert(1)" loading="lazy">
+        <!-- Logo com moldura futurista igual ao navbar -->
+        <div style="
+          position:relative;display:flex;align-items:center;justify-content:center;
+          width:54px;height:54px;
+          background:rgba(0,199,177,0.08);
+          border:1.5px solid rgba(0,199,177,0.4);
+          border-radius:10px;
+          box-shadow:0 0 10px rgba(0,199,177,0.15);
+          flex-shrink:0;overflow:hidden;
+        ">
+          <span style="position:absolute;top:3px;left:3px;width:7px;height:7px;border-top:1.5px solid #00C7B1;border-left:1.5px solid #00C7B1;border-radius:2px 0 0 0;"></span>
+          <span style="position:absolute;top:3px;right:3px;width:7px;height:7px;border-top:1.5px solid #00C7B1;border-right:1.5px solid #00C7B1;border-radius:0 2px 0 0;"></span>
+          <span style="position:absolute;bottom:3px;left:3px;width:7px;height:7px;border-bottom:1.5px solid #00C7B1;border-left:1.5px solid #00C7B1;border-radius:0 0 0 2px;"></span>
+          <span style="position:absolute;bottom:3px;right:3px;width:7px;height:7px;border-bottom:1.5px solid #00C7B1;border-right:1.5px solid #00C7B1;border-radius:0 0 2px 0;"></span>
+          <img
+            src="logo-rm.png"
+            alt="Logo RM Monitoramento"
+            style="height:42px;width:auto;padding:3px;" loading="lazy">
+        </div>
         <div>
           RM Monitoramento
           <small>Alarmes &amp; Segurança · Ribeirão Preto, SP</small>
