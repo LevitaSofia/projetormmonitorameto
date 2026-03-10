@@ -2356,7 +2356,86 @@
                 <div class="c-ico" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24"
                     fill="currentColor">
                     <path
-                      d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.  <!-- ══════════ FOOTER ══════════ -->
+                    <path
+                      d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z" />
+                  <path
+                      d="M12 0C5.373 0 0 5.373 0 12c0 2.127.555 4.122 1.523 5.855L.057 23.59a.72.72 0 0 0 .663.952l6.222-1.65A11.938 11.938 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.26-1.525l-3.571.959.98-3.71A9.783 9.783 0 0 1 2.182 12C2.182 6.572 6.572 2.182 12 2.182c5.428 0 9.818 4.39 9.818 9.818 0 5.428-4.39 9.818-9.818 9.818z" />
+                  </svg></div>
+                <div>
+                  <div class="c-key">WhatsApp</div>
+                  <div class="c-val"><a href="https://wa.me/5516991056601" target="_blank"
+                      rel="noopener noreferrer">(16) 99105-6601</a></div>
+                </div>
+              </div>
+              <div class="contact__row">
+                <div class="c-ico" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg></div>
+                <div>
+                  <div class="c-key">Horário comercial</div>
+                  <div class="c-val">Seg – Sex &middot; 08h às 17h<br><span
+                      style="color:var(--accent);font-size:13px">Monitoramento 24h / 7 dias</span></div>
+                </div>
+              </div>
+            </address>
+          </div>
+
+          <!-- Formulário com labels semânticos -->
+          <div class="form-card reveal">
+            <h2>Orçamento gratuito</h2>
+            <p>Preencha e retornamos pelo WhatsApp em minutos.</p>
+
+            <form id="contact-form" novalidate aria-label="Formulário de orçamento">
+              <div class="form-row">
+                <div class="fg">
+                  <label for="f-name">Nome</label>
+                  <input type="text" id="f-name" name="name" placeholder="Seu nome" autocomplete="name" required>
+                </div>
+                <div class="fg">
+                  <label for="f-phone">WhatsApp</label>
+                  <input type="tel" id="f-phone" name="phone" placeholder="(16) 99999-9999" autocomplete="tel"
+                    inputmode="numeric" required>
+                </div>
+              </div>
+              <div class="fg">
+                <label for="f-type">Tipo de imóvel</label>
+                <select id="f-type" name="type" required>
+                  <option value="">Selecione...</option>
+                  <option value="residencia">Residência</option>
+                  <option value="comercio">Comércio</option>
+                  <option value="empresa">Empresa / Indústria</option>
+                  <option value="condominio">Condomínio</option>
+                </select>
+              </div>
+              <div class="fg">
+                <label for="f-service">Serviço de interesse</label>
+                <select id="f-service" name="service" required>
+                  <option value="">Selecione...</option>
+                  <option value="cameras">Câmeras de Segurança</option>
+                  <option value="alarme">Alarme + Monitoramento</option>
+                  <option value="portao">Portão Eletrônico</option>
+                  <option value="interfone">Interfone</option>
+                  <option value="kit">Kit Completo — R$ 200/mês</option>
+                </select>
+              </div>
+              <div class="fg">
+                <label for="f-msg">Observações <span
+                    style="color:var(--muted);font-weight:400">(opcional)</span></label>
+                <textarea id="f-msg" name="message" placeholder="Descreva sua necessidade..."></textarea>
+              </div>
+              <button type="submit" class="cta-primary" aria-label="Enviar formulário pelo WhatsApp">
+                Enviar pelo WhatsApp
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
   <footer class="footer" role="contentinfo">
     <div class="footer__inner">
       <div class="footer__logo" style="display:flex;align-items:center;gap:12px">
@@ -2404,31 +2483,7 @@
 
       <p class="footer__copy">&copy; 2025 RM Monitoramento &mdash; CNPJ 00.000.000/0001-00 &bull; Ribeirão Preto, SP</p>
     </div>
-  </footer>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"
-          alt="Logo RM Monitoramento" width="48" height="46"
-          style="height:36px;width:auto;opacity:.9;filter:brightness(0) invert(1)" loading="lazy">
-        <div>
-          RM Monitoramento
-          <small>Alarmes &amp; Segurança · Ribeirão Preto, SP</small>
-        </div>
-      </div>
-      <nav class="footer__links" aria-label="Links do rodapé">
-        <a href="#servicos">Serviços</a>
-        <a href="#promocao">Planos</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#contato">Contato</a>
-        <a href="https://www.facebook.com/rmalarmesrp/" target="_blank" rel="noopener noreferrer"
-          aria-label="Página no Facebook (abre nova aba)" style="display:inline-flex;align-items:center;gap:5px">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path
-              d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-          </svg>
-          Facebook
-        </a>
-      </nav>
-      <p class="footer__copy">&copy; 2025 RM Monitoramento</p>
-    </div>
-  </footer>
+
 
   <!-- Toast feedback para form submit -->
   <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true">
